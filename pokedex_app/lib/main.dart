@@ -56,7 +56,8 @@ class _PokemonListScreenState extends State<PokemonListScreen> {
     try {
       final pokemons = await _pokemonService.fetchGen8Pokemons();
       setState(() {
-        _pokemons = pokemons; // Directamente asignamos a _pokemons
+        // Directamente asignamos a _pokemons
+        _pokemons = pokemons; 
         _isLoading = false;
       });
     } catch (e) {

@@ -14,8 +14,7 @@ class PokemonService {
     // --> Obtencion de la url que contiene los pokemons de la 9na generacion
     final response = await http.get(Uri.parse('$_url/generation/9/'));
     
-    // Asignacion de los datos de los pokemones en caso de que la respuesta de la url 
-    // sea exitosa.
+    // ---> Asignacion de los datos de los pokemones
     if (response.statusCode == 200) {
       final Map<String, dynamic> data = json.decode(response.body);
       final List<dynamic> pokemonSpecies = data['pokemon_species'];
